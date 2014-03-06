@@ -1,0 +1,58 @@
+/* Create an origami-like item on your page.   This example uses the H1 tag, but you could apply this to any element. */
+/* Usage: <h1 class="origami">origami example</h1>  */
+/* Link:  http://jsfiddle.net/eat_sleep_code/57yEu/1/  */
+
+
+h1.origami 
+{
+    position: relative;
+    display: block;
+    z-index: 800;
+    width: 320px;
+    height: 40px;
+    margin-top: 80px; /* position entire element vertically */
+    margin-left: 60px; /* position entire element horizontally */
+    padding-top: 0px;
+    padding-left: 24px;
+    background-color: rgba(00, 88, 72, .9);
+    color: rgba(255, 255, 255, 1.0);
+    line-height: 24pt;
+    font-size: 24pt;
+    font-weight: normal;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+h1.origami::before 
+{
+    position: absolute;
+    display: block;
+    margin-top: -30px; /* same as height of this ::before item */
+    margin-left: -20px; /* (padding * -1) of main element */
+    content: "";
+    border-width: 0px;
+    border-style: solid;
+    border-color: transparent;
+    border-left-width: 340px; /* (width + padding) of main element */
+    border-bottom-width: 30px; /* change of slope of top polygon */
+    border-bottom-color: rgba(00, 88, 72, .9);
+    width: 0;
+    height: 0;
+
+}
+
+h1.origami::after 
+{
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    margin-top: 8px; /* position ::after item vertically */
+    margin-left: -24px; /* position ::after item horizontally */
+    content: "";
+    border-width: 0px;
+    border-style: solid;
+    border-color: transparent;
+    border-left-width: 30px;
+    border-top-width: 40px;
+    border-top-color: rgba(00, 60, 50, .95);
+}
