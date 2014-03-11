@@ -1,1 +1,1 @@
-CSS3 Tips &amp; Tricks
+Various CSS3 Tips &amp; Tricks
